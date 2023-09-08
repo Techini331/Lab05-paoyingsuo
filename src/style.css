@@ -1,0 +1,151 @@
+/* ตั้งค่าทั่วไปของหน้าเว็บ */
+body {
+  background: #3c3562;
+  color: #fff;
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+/* สไตล์ข้อความหัวข้อ */
+.message {
+  margin: 2em 0 1em; /* ปรับขนาดของ margin */
+  text-align: center;
+  font-size: 1.5em; /* ปรับขนาดตัวอักษร */
+}
+
+/* สไตล์ส่วนรูปภาพ */
+.images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 150px; /* ปรับความสูงของส่วนรูปภาพ */
+}
+
+.computer img,
+.player img {
+  width: 60%; /* ปรับขนาดรูปภาพให้เล็กลง */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+/* การสั่นภาพคอมพิวเตอร์และผู้เล่น */
+.shakeComputer {
+  animation: shakeComputer 0.8s linear;
+}
+
+.shakePlayer {
+  animation: shakePlayer 0.8s linear;
+}
+
+/* สไตล์คะแนน */
+.points {
+  margin: 1em 0; /* ปรับขนาด margin */
+  text-align: center;
+}
+
+.computerPoints {
+  margin-left: 1em; /* ปรับ margin ให้เล็กลง */
+  font-size: 1.2em; /* ปรับขนาดตัวอักษร */
+  color: #3498db;
+}
+
+.playerPoints {
+  margin-right: 1em; /* ปรับ margin ให้เล็กลง */
+  font-size: 1.2em; /* ปรับขนาดตัวอักษร */
+  color: #e74c3c;
+}
+
+/* สไตล์ปุ่มตัวเลือก */
+.options {
+  margin-top: 2em; /* ปรับ margin-top */
+  display: flex;
+  justify-content: space-around;
+}
+
+.options button {
+  background: none;
+  color: #fff;
+  font-family: "Poppins";
+  border: 1px solid #fff;
+  padding: 0.8em 1.2em; /* ปรับขนาด padding */
+  border-radius: 7px;
+  width: 120px; /* ปรับขนาดปุ่ม */
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 1em; /* ปรับขนาดตัวอักษร */
+}
+
+.options button:hover {
+  background-color: darkcyan;
+  border: 1px solid darkcyan;
+}
+
+/* การสั่นปุ่มคอมพิวเตอร์และผู้เล่น */
+@keyframes shakeComputer {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* สไตล์ปุ่มเริ่มใหม่ */
+.buttons {
+  margin-top: 1em; /* ปรับ margin-top */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons button {
+  background: none;
+  color: #fff;
+  font-family: "Poppins";
+  border: 1px solid #fff;
+  padding: 0.8em 1.2em; /* ปรับขนาด padding */
+  border-radius: 7px;
+  width: 120px; /* ปรับขนาดปุ่ม */
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 1em; /* ปรับขนาดตัวอักษร */
+}
+
+/* CSS สำหรับแสดงรูปภาพของคอมพิวเตอร์และผู้เล่น */
+.images img {
+  width: 100px; /* ปรับขนาดรูปภาพตามความเหมาะสม */
+  height: auto;
+}
